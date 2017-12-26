@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="480dp"
+    android:height="480dp"
+    android:viewportHeight="480"
+    android:viewportWidth="480">
+
+
+
+
+    <!--&lt;!&ndash; This path draws a red circle. &ndash;&gt;-->
+    <!--<path-->
+        <!--android:name="record_path"-->
+        <!--android:fillColor="#DB4437"-->
+        <!--android:pathData="M 2,6 C 2,3.8 3.8,2 6,2 C 8.2,2 10,3.8 10,6 C 10,8.2 8.2,10 6,10 C 3.8,10 2,8.2 2,6"/>-->
+
+    <!--&lt;!&ndash; This path draws an orange triangular play icon. &ndash;&gt;-->
+    <!--<path-->
+        <!--android:name="play_path"-->
+        <!--android:fillColor="#FF9800"-->
+        <!--android:strokeLineCap="round"-->
+        <!--android:strokeLineJoin="round"-->
+        <!--android:strokeWidth="2"-->
+        <!--android:pathData="M 4,2.5 L 4,9.5 L 9.5,6 Z"/>-->
+
+    <!-- This path draws two green stroked vertical pause bars. -->
+    <path
+        android:name="pause_path"
+        android:pathData="M 40,25 L 40,95 M 80,25 L 80,95 "
+        android:strokeColor="#0F9D58"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="20"/>
+
+
+    <path
+        android:name="handwrite1"
+        android:pathData="M126.046387,22.4013672 C121.762207,28.8041992 123.087402,37.2265625 125.954102,38.3725586 C130.26416,41.6142578 138.382324,19.9448242 144.455078,21.7612305 C131.391113,27.4980469 135.289551,36.3017578 137.201172,36.3017578 C152.215819,34.4545898 159.176759,1.63085934 155.48291,0.109375 C146.004882,5.33300781 145.556151,36.3017578 150.474609,38.1679688 C157.431153,38.1679688 160.515137,28.8041992 160.515137,28.8041992"
+        android:strokeColor="@android:color/holo_green_dark"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1"
+        android:trimPathEnd="1"/>
+
+
+
+    <!-- Scale the canvas, then rotate, then translate, then draw the record icon. -->
+    <group android:translateX="2">
+        <group
+            android:rotation="90"
+            android:scaleX="1.5"
+            android:pivotX="6"
+            android:pivotY="6">
+            <path android:name="record_path"/>
+        </group>
+    </group>
+
+    <!-- Translate the canvas, then rotate, then scale, then draw the play icon. -->
+    <group android:scaleX="1.5" android:pivotX="6" android:pivotY="6">
+        <group android:rotation="90" android:pivotX="6" android:pivotY="6">
+            <group android:translateX="2">
+                <path android:name="play_path"/>
+            </group>
+        </group>
+    </group>
+
+    <!-- Rotate the canvas, then translate, then scale, then draw the pause icon. -->
+    <group android:scaleX="1.5" android:pivotX="6" android:pivotY="6">
+        <group
+            android:rotation="90" android:pivotX="6" android:pivotY="6"
+            android:translateX="2">
+            <path android:name="pause_path"/>
+        </group>
+    </group>
+
+
+
+</vector>

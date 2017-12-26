@@ -1,0 +1,42 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/vd_handwriting_android_design">
+
+    <target android:name="android">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="7000"
+                android:interpolator="@android:interpolator/fast_out_linear_in"
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0"
+                android:valueTo="1"/>
+        </aapt:attr>
+    </target>
+
+    <target android:name="design">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="6000"
+                android:interpolator="@android:interpolator/fast_out_linear_in"
+                android:propertyName="trimPathEnd"
+                android:startOffset="7500"
+                android:valueFrom="0"
+                android:valueTo="1"/>
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="second_i_dot">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="500"
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:propertyName="trimPathEnd"
+                android:startOffset="11500"
+                android:valueFrom="0"
+                android:valueTo="1"/>
+        </aapt:attr>
+    </target>
+
+</animated-vector>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">animation_tests</string>
+    <string name="todo">TODO</string>
+    <string name="text_test">A ViewGroup is a special view that can contain other views (called children.) The view group is the base class for layouts and views containers. This class also defines the ViewGroup.LayoutParams class which serves as the base class for layouts parameters.</string>
+</resources>
